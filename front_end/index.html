@@ -70,6 +70,7 @@
         <p class="paragrafo-footer">&copy 2026 StarDev. Todos os direitos reservados.</p>
     </footer>
 </body>
+<<<<<<< HEAD:front_end/index.html
 <script>
     //CONTATO
     document.getElementById("btn_enviar").addEventListener("click", async () => {
@@ -79,12 +80,23 @@
         const comentario = document.getElementById("comentario").value;
 
         const resposta = await fetch("http://localhost:3000/contato", {
+=======
+
+<script>
+    //CONTATO
+    document.getElementById("btn_enviar").addEventListener("click", async () => {
+        const nome = document.getElementById("input_nome").value;
+        const email = document.getElementById("input_email").value;
+        const comentario = document.getElementById("input_comentario").value;
+        const resposta = await fetch("http://localhost:3000/contato", {     
+>>>>>>> b8b19550f791893513d1ed9e6b038f5f99f66bcb:front/index.html
             method: "POST",
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
+<<<<<<< HEAD:front_end/index.html
                 nome: nome,
                 email: email,
                 comentario: comentario
@@ -94,5 +106,22 @@
     });
 </script>
 </script>
+=======
+                "nome": nome,
+                "email": email,
+                "comentario": comentario})
+        });
+        // terceira etapa - pegar a resposta do back-end
+        if(resposta.ok){
+            const dados = await resposta.json()
+            document.getElementById("resultadoFale").innerText = dados.resposta
+        }else{
+
+        }
+
+   });
+   </script>
+
+>>>>>>> b8b19550f791893513d1ed9e6b038f5f99f66bcb:front/index.html
 </html>
 
