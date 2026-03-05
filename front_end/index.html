@@ -25,7 +25,7 @@
             </figure>
         </section>
         <section id="home">
-            <h2>HOME</h2>
+            <h1>HOME</h1>
             <br>
             <p>A StarDev surgiu da percepção de que faltava um curso de TI online que reunisse os
                 principais conteúdo do curso técnico de forma clara, objetiva e direta ao ponto. 
@@ -43,23 +43,23 @@
         </section>
         <!--Formulário de feedback-->
         <section id="feedback">
-            <h2> Nos dê seu feedback</h2>
+            <h2>Nos dê seu feedback</h2>
             <form>
                 <fieldset>
-                    <legend><b>Informações de contato</b></legend>
-                    <label for="name">Nome: </label>
+                    <legend><b><strong>Informações de contato</strong></b></legend>
+                    <label for="nome" id="input_nome"><strong>Nome:</strong></label>
                     <br>
-                    <input type="text" id="name" name="name" placeholder="Digite seu nome completo">
+                    <input type="text" id="input_nome"  placeholder="Digite seu nome completo" minlength="6">
                     <br><br>
-                    <label for="email">Email: </label>
+                    <label for="email" id="input_email"><strong>Email:</strong></label>
                     <br>
-                    <input type="email" id="email" name="email" placeholder="Digite seu melhor email">
+                    <input type="email" id="input_email" name="email" placeholder="Digite seu melhor email" minlength="6">
                     <br><br>
-                    <label for="comentarios">Comentários: </label>
+                    <label for="comentario" id="input_comentario"><strong>Comentários:</strong></label>
                     <br>
-                    <textarea id="comentarios" placeholder="Digite seus comentários aqui"></textarea>
+                    <textarea id="input_comentario" placeholder="Digite seus comentários aqui"></textarea>
                     <br><br>
-                    <button class="btn btn-primary" onclick="alert('FEEDBACK ENVIADO')"><strong>Enviar feedback</strong></button>
+                    <button id="btn_enviar" class="btn btn-primary" type="button"><strong>Enviar feedback</strong></button>
                 </fieldset>
             </form>
         </section>
@@ -70,5 +70,29 @@
         <p class="paragrafo-footer">&copy 2026 StarDev. Todos os direitos reservados.</p>
     </footer>
 </body>
+<script>
+    //CONTATO
+    document.getElementById("btn_enviar").addEventListener("click", async () => {
+
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const comentario = document.getElementById("comentario").value;
+
+        const resposta = await fetch("http://localhost:3000/contato", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nome: nome,
+                email: email,
+                comentario: comentario
+            })
+        });
+
+    });
+</script>
+</script>
 </html>
 

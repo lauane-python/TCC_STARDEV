@@ -82,7 +82,7 @@ figure {
 }
 
 fieldset {
-    border: 2px solid #804256;
+    border: 5px solid #716f35;
     border-radius: 5px;
     padding: 1rem;
     margin: 10px;
@@ -91,6 +91,7 @@ fieldset {
 legend {
     color: #804256;
     padding: 0 0.5rem;
+    font-size: 30px;
 }
 
 textarea {
@@ -102,35 +103,46 @@ textarea {
 }
 
 
-input[type="text"], input[type="email"]{
+input[type="text"], input[type="email"], input[type="password"], input[type="number"]{
     width: 100%;
     padding: 0.6rem;
-    border: 2px solid #804256;
+    margin: 3rem;
     outline: none;
-    border-radius: 5px;
-    background-color: transparent;
+    border-radius: 10px;
+    background-color: #db9a8f;
+    border: transparent;
     color: #804256;
-
+    font-size: 20px;
 }
 
 input::placeholder {
-    color: #804256;
+    color: #a56940;
     font-family: "Josefin Sans", sans-serif;
     font-style: oblique;
 
 }
 
 textarea::placeholder {
-  color: #804256;
+  color: #a56940;
   font-style: oblique;
   font-family: "Josefin Sans", sans-serif;
   padding: 0.6rem;
+}
+
+label {
+  font-size: 20px;
+  color: #a56940;
+  width: 500px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 button {
     background-color: #716f35;
     border: none;
     padding: 0.8rem;
+    margin: 1rem;
     color: #f2e9e1;
     border-radius: 5px;
     cursor: pointer;
@@ -140,6 +152,7 @@ footer {
     background-color: #804256;
     padding: 2rem;
     text-align: center;
+    height: 7rem;
 }
 
 .paragrafo-footer {
@@ -151,13 +164,6 @@ footer a {
     color: #db9a8f;
 }
 
-#name, #email {
-  width: 500px;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-}
-
 #feedback {
   width: 500px;
   margin: 0 auto 20px auto; /* centraliza o bloco */
@@ -167,6 +173,7 @@ footer a {
   display: block;
   text-align: left; /* força alinhamento à esquerda */
   margin-bottom: 5px;
+  color: #804256;
 }
 
 #feedback input,
@@ -184,3 +191,10 @@ footer a {
   width: 500px;
   margin: 0 auto;
 }
+
+input #nome, #email, #telefone, #senha {
+  color: #db9a8f;
+
+}
+
+#input_nome, #input_email, #
