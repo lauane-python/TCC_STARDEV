@@ -71,11 +71,8 @@
         <p class="paragrafo-footer">&copy 2026 StarDev. Todos os direitos reservados.</p>
     </footer>
 </body>
-<<<<<<< HEAD:front_end/index.html
 <script>
 
-<script>
-    //CONTATO
     document.getElementById("btn_enviar").addEventListener("click", async () => {
         const nome = document.getElementById("input_nome").value;
         const email = document.getElementById("input_email").value;
@@ -97,23 +94,5 @@
 
     });
 </script>
-</script>
-=======
-                "nome": nome,
-                "email": email,
-                "comentario": comentario})
-        });
-        // terceira etapa - pegar a resposta do back-end
-        if(resposta.ok){
-            const dados = await resposta.json()
-            document.getElementById("resultadoFale").innerText = dados.resposta
-        }else{
-
-        }
-
-   });
-   </script>
-
->>>>>>> b8b19550f791893513d1ed9e6b038f5f99f66bcb:front/index.html
 </html>
 
