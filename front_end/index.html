@@ -15,6 +15,7 @@
             <a href="#home">HOME</a>
             <a href="#feedback">FEEDBACK</a>
             <a href="cadastro.html">CADASTRA-SE</a>
+            
             <a href="login.html">LOGIN</a>
         </nav>
     </header>
@@ -72,15 +73,6 @@
 </body>
 <<<<<<< HEAD:front_end/index.html
 <script>
-    //CONTATO
-    document.getElementById("btn_enviar").addEventListener("click", async () => {
-
-        const nome = document.getElementById("nome").value;
-        const email = document.getElementById("email").value;
-        const comentario = document.getElementById("comentario").value;
-
-        const resposta = await fetch("http://localhost:3000/contato", {
-=======
 
 <script>
     //CONTATO
@@ -88,15 +80,15 @@
         const nome = document.getElementById("input_nome").value;
         const email = document.getElementById("input_email").value;
         const comentario = document.getElementById("input_comentario").value;
-        const resposta = await fetch("http://localhost:3000/contato", {     
->>>>>>> b8b19550f791893513d1ed9e6b038f5f99f66bcb:front/index.html
+        const resposta = await fetch("http://10.111.9.174:3000/contato", {     
+
             method: "POST",
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-<<<<<<< HEAD:front_end/index.html
+
                 nome: nome,
                 email: email,
                 comentario: comentario
